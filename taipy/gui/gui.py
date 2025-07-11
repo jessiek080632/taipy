@@ -29,12 +29,12 @@ from threading import Thread, Timer
 from types import FrameType, LambdaType, SimpleNamespace
 from urllib.parse import unquote, urlencode, urlparse
 
+import __main__  # noqa: F401
 import markdown as md_lib
 import tzlocal
 import zoneinfo
 from werkzeug.utils import secure_filename
 
-import __main__  # noqa: F401
 from taipy.common import _module_exists
 from taipy.common.logger._taipy_logger import _TaipyLogger
 
