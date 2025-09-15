@@ -16,6 +16,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import urlopen
 
 import pytest
+from taipy import Gui
 from testbook import testbook
 
 
