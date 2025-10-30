@@ -97,7 +97,7 @@ class _Manager(Generic[EntityType]):
         if cls._repository._exists(entity.id):  # type: ignore[attr-defined]
             cls._repository._save(entity)
         else:
-            raise NonExistingEntity(entity.id)  # type: ignore[attr-defined]
+            cls._repository._save(entity)
 
     @classmethod
     def _get_all(cls, version_number: Optional[str] = "all") -> List[EntityType]:
